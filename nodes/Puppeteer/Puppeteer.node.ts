@@ -743,7 +743,7 @@ export class Puppeteer implements INodeType {
     ): Promise<INodeExecutionData[]> => {
       let page: Page | undefined;
       try {
-        page = await browser.newPage();
+        page = (await browser.pages()).length > 0 ? (await browser.pages())[0] : await browser.newPage();
         await handleOptions.call(this, itemIndex, items, browser, page);
 
         if (operation === "runCustomScript") {
