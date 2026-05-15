@@ -13,17 +13,13 @@ RUN ARCH=$(uname -m) && \
 
 # Install Chrome dependencies and Chrome
 RUN apk add --no-cache \
-	chromium \
 	nss \
 	glib \
-	freetype \
-	freetype-dev \
 	harfbuzz \
 	ca-certificates \
-	ttf-freefont \
 	udev \
-	ttf-liberation \
-	font-noto-emoji
+        python3 \
+        build-base
 
 # Tell Puppeteer to use installed Chrome instead of downloading it
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
