@@ -1,4 +1,6 @@
-# n8n-nodes-puppeteer
+# n8n-nodes-puppeteer (hostname fork)
+
+This experimental fork forcibly injects Host: localhost headers to puppeteer.connect.
 
 ![n8n.io - Workflow Automation](https://raw.githubusercontent.com/n8n-io/n8n/master/assets/n8n-logo.png)
 
