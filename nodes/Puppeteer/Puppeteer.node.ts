@@ -721,6 +721,7 @@ export class Puppeteer implements INodeType {
           browserWSEndpoint,
           protocol: protocol || "cdp",
           protocolTimeout,
+					headers: {"Host": "localhost"}
         });
       } else {
         browser = await puppeteer.launch({
