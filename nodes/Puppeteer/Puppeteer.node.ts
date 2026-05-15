@@ -806,11 +806,11 @@ export class Puppeteer implements INodeType {
         );
       } finally {
         if (page) {
-          try {
-            await page.close();
-          } catch (error) {
-            console.error("Error closing page:", error);
-          }
+          // try {
+          //   await page.close();
+          // } catch (error) {
+          //   console.error("Error closing page:", error);
+          // }
         }
       }
     };
